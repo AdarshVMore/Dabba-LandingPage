@@ -38,7 +38,6 @@ export default function Rewards() {
         uppercase 
         leading-[1.2] 
         tracking-[1px]
-        text-yellow
         font-normal
         heading-yellow
       "
@@ -83,7 +82,7 @@ export default function Rewards() {
                 </h2>
 
                 {/* Reward Boxes */}
-                <div className="flex items-center justify-center drop-shadow-[0px_4px_4px_rgba(0,0,0,0.25)] mb-12 md:mb-15">
+                <div className="flex items-center  justify-center drop-shadow-[0px_4px_4px_rgba(0,0,0,0.25)] mb-12 md:mb-15">
                   
                   {[...Array(3)].map((_, i) => (
                     <React.Fragment key={i}>
@@ -99,7 +98,7 @@ export default function Rewards() {
                             i % 2 === 0 ? "-rotate-45" : ""
                           } flex flex-col gap-1 md:gap-4 justify-center items-center`}
                         >
-                          <h3 className="text-24 md:text-[36px] uppercase">
+                          <h3 className="text-24 font-extrabold md:text-[36px] uppercase">
                             {calculateReward(position)}
                           </h3>
                           <p className="mb-0 text-12 md:text-16 font-semibold">

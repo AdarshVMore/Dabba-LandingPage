@@ -67,7 +67,7 @@ export default function Quests() {
 
           <div className="flex flex-wrap -mx-4 items-center flex-col-reverse md:flex-row gap-y-4">
             <div className="w-full md:w-1/2 px-4">
-              <h2 className="heading-yellow text-yellow-300 mb-4">WXM x Dabba Quest</h2>
+              <h2 className="heading-yellow mb-4">WXM x Dabba Quest</h2>
               <p className="max-w-[610px] mb-6 font-semibold">
                 Join the journey to earn XP by completing exciting challenges.
                 Level up your engagement with Wifidabba and unlock rewards as
@@ -108,7 +108,8 @@ export default function Quests() {
                   </h3>
 
                   <Button 
-                    variant={quest.status === 'completed' ? 'completed' : 'default'}
+                    className={quest.status === 'completed' ? 'bg-[#0ce201]' : ''}
+                    variant="default"
                     disabled={quest.status === 'completed'}
                   >
                     {quest.status === 'completed' ? 'Completed' : 'Start Quest'}

@@ -41,6 +41,18 @@
            tracking-[1px]
            text-yellow-300
            yellow-stroke-text;
+    text-shadow: 2px 2px 0px rgba(0, 0, 0, 1);
+  }
+  .heading-white {
+    @apply font-heading 
+           text-[28px] 
+           md:text-[48px] 
+           uppercase 
+           leading-[1.2] 
+           tracking-[1px]
+           text-yellow-300
+           yellow-stroke-text;
+    text-shadow: 2px 2px 0px rgba(0, 0, 0, 1);
   }
 }
 

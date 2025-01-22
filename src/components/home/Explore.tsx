@@ -66,7 +66,7 @@ export default function Explore() {
                   </div>
 
                   <div>
-                    <h3 className="heading !text-24 mb-2">{item.title}</h3>
+                    <h3 className="heading-yellow !text-24 mb-2">{item.title}</h3>
                     <p className="text-16 font-semibold mb-4">{item.description}</p>
                     <Button>Learn More</Button>
                   </div>

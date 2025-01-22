@@ -111,7 +111,7 @@ const config: Config = {
           'text-stroke': '1px black',
         },
         '.yellow-stroke-text': {
-          'color': '#D5F278',
+          'color': 'yellow-300',
           '-webkit-text-stroke': '1px black',
           'text-stroke': '1px black',
           'text-shadow': '-1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000',

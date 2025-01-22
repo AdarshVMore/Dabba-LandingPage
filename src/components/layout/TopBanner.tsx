@@ -38,7 +38,7 @@ export default function TopBanner() {
               </div>
 
               <div>
-                <h3 className="inline-flex gap-1 md:gap-3 items-center text-18 lg:text-24 mb-2 md:mb-0 relative pr-10 font-anton">
+                <h3 className="inline-flex gap-1 md:gap-3 items-center text-18 lg:text-24 mb-2 md:mb-0 relative pr-10 heading-yellow">
                   Dabba wxm lightning deal
                   <Image
                     src="/images/moon-rocket.webp"
