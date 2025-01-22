@@ -60,7 +60,7 @@ const config: Config = {
         heading: ['"Anton", serif'],
         chakrapetch: ['"Chakra Petch", serif'],
         inter: ['"Inter", serif'],
-        'plus-jakarta': ['Plus Jakarta Sans', 'sans-serif'],
+        'plus-jakarta': ['var(--font-plus-jakarta)', 'sans-serif'],
         'anton': ['Anton', 'sans-serif'],
       },
       colors: {

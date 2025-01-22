@@ -25,7 +25,7 @@ export default function Hero() {
       <div className="max-w-[1438px] mx-auto px-4">
         <div className="rounded-[32px] overflow-hidden relative bg-[url('/images/hero-bg.webp')] bg-center bg-cover border-2 border-black pt-5 md:pt-0">
           <div className="text-center max-w-[634px] mx-auto py-10">
-            <h2 className="heading text-white md:text-[36px] text-pretty">
+            <h2 className="heading text-white md:text-[36px] text-pretty [text-shadow:3px_3px_0px_rgba(0,0,0,1)]">
               Dabba is deploying and managing 800 Weather XM Stations across India
             </h2>
           </div>

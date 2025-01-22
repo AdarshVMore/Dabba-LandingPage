@@ -29,7 +29,6 @@ const Button = ({
           'px-8 py-2 text-base': size === 'large',
           'shadow-smallShadow': shadow === 'small',
           'shadow-bigShadow': shadow === 'big',
-          
         },
         className
       )}
