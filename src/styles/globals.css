@@ -1,0 +1,80 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus Jakarta Sans:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --font-plus-jakarta: '';
+  --font-anton: '';
+}
+
+@layer base {
+  body {
+    @apply font-plus-jakarta bg-[#FFF8EC];
+  }
+
+  .heading {
+    @apply font-anton;
+  }
+}
+
+@layer components {
+  .button {
+    @apply inline-flex items-center justify-center rounded-lg border border-black bg-yellow text-black font-bold uppercase hover:bg-yellow-600 transition-colors;
+  }
+
+  .button-small {
+    @apply px-4 py-2 text-sm;
+  }
+
+  .button-white {
+    @apply bg-white hover:bg-gray-50;
+  }
+
+  .heading-yellow {
+    @apply font-heading 
+           text-[28px] 
+           md:text-[48px] 
+           uppercase 
+           leading-[1.2] 
+           tracking-[1px]
+           text-yellow-300
+           yellow-stroke-text;
+  }
+}
+
+/* Animations */
+.journalist-1,
+.journalist-2,
+.journalist-speech-1,
+.journalist-speech-2 {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.5s ease-out;
+}
+
+.journalist-1.active,
+.journalist-2.active,
+.journalist-speech-1.active,
+.journalist-speech-2.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Navigation */
+.nav-main {
+  @apply fixed md:static inset-0 bg-white md:bg-transparent p-20 md:p-0 flex-col md:flex-row items-center justify-center;
+  transform: translateX(100%);
+  transition: transform 0.3s ease-out;
+}
+
+.nav-main.active {
+  transform: translateX(0);
+}
+
+@screen md {
+  .nav-main {
+    transform: none;
+  }
+} 
