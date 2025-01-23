@@ -21,12 +21,14 @@ const Button = ({
     <button
       className={clsx(
         'inline-flex items-center font-anton justify-center rounded-lg border border-black uppercase transition-all duration-200 active:translate-y-1 active:shadow-none',
+        'hover:shadow-none',
+
         {
           'bg-[#FBE043] hover:bg-white text-black': variant === 'default',
           'bg-white hover:bg-[#FBE043]': variant === 'white',
-          'px-4 py-1 text-xs': size === 'small',
-          'px-6 py-2 text-sm': size === 'medium',
-          'px-8 py-2 text-base': size === 'large',
+          'px-4 py-[8px] text-xs': size === 'small',
+          'px-6 py-[8px] text-sm': size === 'medium',
+          'px-8 py-[8px] text-base': size === 'large',
           'shadow-smallShadow': shadow === 'small',
           'shadow-bigShadow': shadow === 'big',
         },

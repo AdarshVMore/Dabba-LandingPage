@@ -50,11 +50,11 @@ export default function FAQ() {
                 className="w-full flex justify-between items-center py-4 text-left"
                 onClick={() => setActiveIndex(activeIndex === index ? -1 : index)}
               >
-                <span className="text-12 md:text-12 ">{faq.question}</span>
+                <span className="text-18 md:text-18 ">{faq.question}</span>
                 <div className="relative w-6 h-6">
                   <div className="absolute inset-0 w-full h-0.5 bg-black top-1/2 -translate-y-1/2"></div>
                   <div 
-                    className={`absolute inset-0 w-0.5 text-12 h-full bg-black left-1/2 -translate-x-1/2 transition-transform duration-300 ${
+                    className={`absolute inset-0 w-0.5 text-18 h-full bg-black left-1/2 -translate-x-1/2 transition-transform duration-300 ${
                       activeIndex === index ? 'scale-y-0' : 'scale-y-100'
                     }`}
                   ></div>
@@ -65,7 +65,7 @@ export default function FAQ() {
                   activeIndex === index ? 'max-h-96' : 'max-h-0'
                 }`}
               >
-                <p className="pb-4 text-12 text-black/70">{faq.answer}</p>
+                <p className="pb-4 text-18 text-black/70">{faq.answer}</p>
               </div>
             </div>
           ))}

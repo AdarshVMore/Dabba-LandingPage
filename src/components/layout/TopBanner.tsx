@@ -65,7 +65,7 @@ export default function TopBanner() {
               <div className="flex-1">
                 <div className="flex justify-between items-end mb-2">
                   <h3 className="text-16 md:text-20 font-semibold font-anton uppercase">
-                    Hotspot reserved
+                    Hotspots reserved
                   </h3>
                   <div className="text-12 font-plus-jakarta font-semibold">0 / 2400 Units</div>
                 </div>

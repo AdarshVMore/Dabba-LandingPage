@@ -7,7 +7,7 @@ import Button from "@/components/ui/Button";
 export default function Rewards() {
   const [position, setPosition] = useState(0);
   const maxReward = 36; // Maximum WXM reward
-  const calculateReward = (pos: number) => Math.round((pos / 100) * maxReward);
+  const calculateReward = (pos: number) => Math.round((pos / 100) * maxReward / 3) * 3;
 
   const handleDrag = (e: React.MouseEvent<HTMLDivElement>) => {
     const container = e.currentTarget.parentElement;
@@ -146,16 +146,37 @@ export default function Rewards() {
                 {/* Slider */}
                 <div className="relative max-w-[610px] mx-auto mb-12 md:mb-20">
                   <div
-                    className="absolute left-15 top-1/2 -translate-y-1/2 max-w-[80px] cursor-grab active:cursor-grabbing z-20"
+                    className="absolute top-1/2 -translate-y-1/2 -translate-x-1/2 w-[80px] cursor-grab active:cursor-grabbing z-20"
                     style={{ left: `${position}%` }}
-                    onMouseDown={(e) => handleDrag(e)}
+                    onMouseDown={(e) => {
+                      e.preventDefault();
+                      const container = e.currentTarget.parentElement;
+                      if (!container) return;
+
+                      const handleMouseMove = (e: MouseEvent) => {
+                        const rect = container.getBoundingClientRect();
+                        const x = e.clientX - rect.left;
+                        const width = rect.width;
+                        const newPosition = Math.max(0, Math.min(100, (x / width) * 100));
+                        setPosition(newPosition);
+                      };
+
+                      const handleMouseUp = () => {
+                        document.removeEventListener('mousemove', handleMouseMove);
+                        document.removeEventListener('mouseup', handleMouseUp);
+                      };
+
+                      document.addEventListener('mousemove', handleMouseMove);
+                      document.addEventListener('mouseup', handleMouseUp);
+                    }}
                   >
                     <Image
                       src="/images/weather-xm-box.webp"
                       alt="Slider"
                       width={80}
                       height={80}
-                      className="pointer-events-none"
+                      className="pointer-events-none select-none w-full h-auto"
+                      draggable={false}
                     />
                   </div>
                   <div className="w-full h-3 bg-transparent rounded-full flex items-center z-10">
